@@ -15,6 +15,8 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var mainView: UIView!
     
+    @IBOutlet weak var progressBar: LinearProgressView!
+    
     //First Player
     @IBOutlet weak var firstPlayerButton: UIButton!
     @IBOutlet weak var firstPlayerNameLabel: UILabel!
@@ -255,6 +257,7 @@ class GameViewController: UIViewController {
         randomWordButton.setTitle("", for: .normal)
         randomWordButton.isHidden = true
         self.numberOfWordLabel.text = AppConstants.numberOfWord(self.wordCount, total: self.wordsArray.count)
+        progressBar.animationDuration = 3.0
     }
     
     func nextWord() {
@@ -445,6 +448,7 @@ class GameViewController: UIViewController {
         self.disableAllPlayerInteractionTillNextWord()
         self.randomWordConstraint.constant = -50
         self.view.layoutIfNeeded()
+        progressBar.setProgress(0, animated: false)
     }
     
     func moveNameOnScreen() {
@@ -454,6 +458,7 @@ class GameViewController: UIViewController {
             self.randomWordConstraint.constant = 150
             self.view.layoutIfNeeded()
         }
+        progressBar.setProgress(1, animated: true)
     }
     
     
