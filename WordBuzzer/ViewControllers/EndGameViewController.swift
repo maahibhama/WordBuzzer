@@ -42,14 +42,14 @@ class EndGameViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated:true)
         if let player = winnerPlayer {
             winnerNameLabel.text = player.name
-            winnerScoreLabel.text = "Score: \(player.score)/\(numberOfWords)"
-            winnerLabel.text = "Winner"
+            winnerScoreLabel.text = AppConstants.scoreOutOff(score: player.score, total: numberOfWords)
+            winnerLabel.text = AppConstants.Winner
             imageView.image = #imageLiteral(resourceName: "winnerLogo")
         }else {
             imageView.image = #imageLiteral(resourceName: "sadLogo")
             winnerNameLabel.isHidden = true
             winnerScoreLabel.isHidden = true
-            winnerLabel.text = "No Winner"
+            winnerLabel.text = AppConstants.NoWinner
         }
     }
     

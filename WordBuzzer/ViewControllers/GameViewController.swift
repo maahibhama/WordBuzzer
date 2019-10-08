@@ -78,7 +78,7 @@ class GameViewController: UIViewController {
     
     var isFirstTime: Bool = true {
         didSet{
-            let title = self.isFirstTime ? "Start Game" : "Next Word"
+            let title = self.isFirstTime ? AppConstants.StartGame : AppConstants.NextWord
             self.nextWordButton.setTitle(title, for: .normal)
             endGameButton.isHidden = self.isFirstTime
             if self.isFirstTime == false {
@@ -91,7 +91,7 @@ class GameViewController: UIViewController {
         didSet{
             if wordsArray.count >= self.wordCount, self.wordCount >= 0 {
                 self.currentWord = wordsArray[self.wordCount - 1]
-                self.numberOfWordLabel.text = "Number of Words:  \(self.wordCount)/\(self.wordsArray.count)"
+                self.numberOfWordLabel.text = AppConstants.numberOfWord(self.wordCount, total: self.wordsArray.count)
             } else if wordsArray.count < self.wordCount {
                 self.endGame()
             }
@@ -246,7 +246,7 @@ class GameViewController: UIViewController {
         endGameButton.layer.cornerRadius = 4.0
         if isFirstTime {
             endGameButton.isHidden = isFirstTime
-            nextWordButton.setTitle("Start Game", for: .normal)
+            nextWordButton.setTitle(AppConstants.StartGame, for: .normal)
             disableAllPlayerInteractionTillNextWord()
         } else {
             self.navigationItem.setHidesBackButton(true, animated:true);
@@ -254,7 +254,7 @@ class GameViewController: UIViewController {
         mainWordLabel.text = ""
         randomWordButton.setTitle("", for: .normal)
         randomWordButton.isHidden = true
-        self.numberOfWordLabel.text = "Number of Words:  \(self.wordCount)/\(self.wordsArray.count)"
+        self.numberOfWordLabel.text = AppConstants.numberOfWord(self.wordCount, total: self.wordsArray.count)
     }
     
     func nextWord() {
@@ -274,7 +274,7 @@ class GameViewController: UIViewController {
         for i in 0..<playerArray.count {
             let player = playerArray[i]
             let playerName = player.name
-            let playerScore = scoreLabel(score: playerArray[i].score)
+            let playerScore = AppConstants.scoreLabel(score: playerArray[i].score)
             switch i {
             case 0:
                 firstPlayerNameLabel.text = playerName
@@ -289,7 +289,7 @@ class GameViewController: UIViewController {
                 fourthPlayerNameLabel.text = playerName
                 fourthPlayerScoreLabel.text = playerScore
             default:
-                print("hello")
+                print("")
             }
         }
         hideShowAllImageView(isHidden: false)
@@ -309,13 +309,13 @@ class GameViewController: UIViewController {
         self.hideShowAllImageView(isHidden: false)
         for (key, _) in self.selectedPlayersWithTime {
             switch key {
-            case "1":
+            case AppConstants.FirstPlayerKey:
                 playerImageSet(imageView: firstPlayerRWImage, isAnswerRight: true)
-            case "2":
+            case AppConstants.SecondPlayerKey:
                 playerImageSet(imageView: secondPlayerRWImage, isAnswerRight: true)
-            case "3":
+            case AppConstants.ThirdPlayerKey:
                 playerImageSet(imageView: thirdPlayerRWImage, isAnswerRight: true)
-            case "4":
+            case AppConstants.FourthPlayerKey:
                 playerImageSet(imageView: fourthPlayerRWImage, isAnswerRight: true)
             default:
                 print("")
@@ -325,16 +325,16 @@ class GameViewController: UIViewController {
     func updateEliminatePlayerImageView() {
         for player in self.invalidPlayerListTillNextWord {
             switch player.id {
-            case "1":
+            case AppConstants.FirstPlayerKey:
                 playerImageSet(imageView: firstPlayerRWImage, isAnswerRight: false)
                 firstPlayerRWImage.isHidden = false
-            case "2":
+            case AppConstants.SecondPlayerKey:
                 playerImageSet(imageView: secondPlayerRWImage, isAnswerRight: false)
                 secondPlayerRWImage.isHidden = false
-            case "3":
+            case AppConstants.ThirdPlayerKey:
                 playerImageSet(imageView: thirdPlayerRWImage, isAnswerRight: false)
                 thirdPlayerRWImage.isHidden = false
-            case "4":
+            case AppConstants.FourthPlayerKey:
                 playerImageSet(imageView: fourthPlayerRWImage, isAnswerRight: false)
                 fourthPlayerRWImage.isHidden = false
             default:
@@ -361,13 +361,13 @@ class GameViewController: UIViewController {
         }
         
         switch player.id {
-        case "1":
+        case AppConstants.FirstPlayerKey:
             self.firstPlayerPrizeImageView.isHidden = false
-        case "2":
+        case AppConstants.SecondPlayerKey:
             self.secondPlayerPrizeImageView.isHidden = false
-        case "3":
+        case AppConstants.ThirdPlayerKey:
             self.thirdPlayerPrizeImageView.isHidden = false
-        case "4":
+        case AppConstants.FourthPlayerKey:
             self.fourthPlayerPrizeImageView.isHidden = false
         default:
             print("wrong Item")
@@ -400,16 +400,16 @@ class GameViewController: UIViewController {
         var disbalePlayer:[Player] = invalidPlayerListTillNextWord
         for (key, _) in self.selectedPlayersWithTime {
             switch key {
-            case "1":
+            case AppConstants.FirstPlayerKey:
                 playerButtonEnable(button: firstPlayerButton, isEnable: false)
                 disbalePlayer.append(playerArray[0])
-            case "2":
+            case AppConstants.SecondPlayerKey:
                 playerButtonEnable(button: secondPlayerButton, isEnable: false)
                 disbalePlayer.append(playerArray[1])
-            case "3":
+            case AppConstants.ThirdPlayerKey:
                 playerButtonEnable(button: thirdPlayerButton, isEnable: false)
                 disbalePlayer.append(playerArray[2])
-            case "4":
+            case AppConstants.FourthPlayerKey:
                 playerButtonEnable(button: fourthPlayerButton, isEnable: false)
                 disbalePlayer.append(playerArray[3])
             default:
@@ -425,16 +425,16 @@ class GameViewController: UIViewController {
            enablePlayers = Array(Set(enablePlayers).subtracting(disablePlayer))
            for player in enablePlayers {
                switch player.id {
-               case "1":
+               case AppConstants.FirstPlayerKey:
                    playerButtonEnable(button: firstPlayerButton, isEnable: true)
-               case "2":
+               case AppConstants.SecondPlayerKey:
                    playerButtonEnable(button: secondPlayerButton, isEnable: true)
-               case "3":
+               case AppConstants.ThirdPlayerKey:
                    playerButtonEnable(button: thirdPlayerButton, isEnable: true)
-               case "4":
+               case AppConstants.FourthPlayerKey:
                    playerButtonEnable(button: fourthPlayerButton, isEnable: true)
                default:
-                   print("Invalid")
+                   print("")
                }
            }
        }
@@ -460,10 +460,10 @@ class GameViewController: UIViewController {
     //MARK:- Player Methods
     func setUpPlayer() {
         let players:[Player] = [
-            Player(id: "1", name: "1st Player", score: 0),
-            Player(id: "2", name: "2nd Player", score: 0),
-            Player(id: "3", name: "3rd Player", score: 0),
-            Player(id: "4", name: "4th Player", score: 0),
+            Player(id: AppConstants.FirstPlayerKey, name: "1st Player", score: 0),
+            Player(id: AppConstants.SecondPlayerKey, name: "2nd Player", score: 0),
+            Player(id: AppConstants.ThirdPlayerKey, name: "3rd Player", score: 0),
+            Player(id: AppConstants.FourthPlayerKey, name: "4th Player", score: 0),
         ]
         playerArray.append(contentsOf: players)
         updatePlayerInfo()
@@ -499,10 +499,6 @@ class GameViewController: UIViewController {
     
     
     //MARK:- Helper Methods
-    func scoreLabel(score: Int) -> String {
-        return "Score: \(score)"
-    }
-    
     func playerImageSet(imageView: UIImageView, isAnswerRight: Bool) {
         if isAnswerRight {
             imageView.image = #imageLiteral(resourceName: "checkRound")
@@ -541,7 +537,7 @@ class GameViewController: UIViewController {
     
     //MARK: - End Game
     func endGame() {
-        let endGameViewController: EndGameViewController = self.storyboard?.instantiateViewController(withIdentifier: "EndGameViewController") as! EndGameViewController
+        let endGameViewController: EndGameViewController = self.storyboard?.instantiateViewController(withIdentifier: AppConstants.EndGameViewController) as! EndGameViewController
         let sortedArray = playerArray.sorted{ $0.score > $1.score }
         if let first = sortedArray.first, first.score > 0 {
             endGameViewController.winnerPlayer = first
@@ -569,7 +565,7 @@ class GameViewController: UIViewController {
         guard isOnGameScreen else {
             return
         }
-        let popOverVC: PopUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "PopUpViewController") as! PopUpViewController
+        let popOverVC: PopUpViewController = self.storyboard?.instantiateViewController(withIdentifier: AppConstants.PopUpViewController) as! PopUpViewController
         popOverVC.currentWordsNumber = wordCount
         popOverVC.numberOfWords = self.wordsArray.count
         popOverVC.word = currentWord

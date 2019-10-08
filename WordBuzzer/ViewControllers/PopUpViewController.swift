@@ -31,6 +31,7 @@ class PopUpViewController: UIViewController {
     
     var onClickNextButton:(() -> Void)?
     
+    
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +44,9 @@ class PopUpViewController: UIViewController {
             self.questionWordLabel.text = word.textEnglish
             self.answerWordLabel.text = word.textSpanish
         }
-        self.numberOfWordLabel.text = "Number of Words:  \(self.currentWordsNumber)/\(self.numberOfWords)"
+        self.numberOfWordLabel.text = AppConstants.numberOfWord(self.currentWordsNumber, total: self.numberOfWords)
     }
+    
     
     //MARK:- Interface Builder Actions
     @IBAction func nextWordButtonAction(_ sender: UIButton) {

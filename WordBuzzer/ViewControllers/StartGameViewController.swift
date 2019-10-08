@@ -81,14 +81,14 @@ class StartGameViewController: UIViewController {
         
         if selectedNumberOfWordsButton != nil {
             
-            let gameViewController: GameViewController = self.storyboard?.instantiateViewController(withIdentifier: "GameViewController") as! GameViewController
+            let gameViewController: GameViewController = self.storyboard?.instantiateViewController(withIdentifier: AppConstants.GameViewController) as! GameViewController
             gameViewController.wordsArray = selectedRandomWordsFromWordArray(limit:selectedNumberOfWords)
             gameViewController.allSpanishWords = self.wordsArray.map({ $0.textSpanish })
             self.navigationController?.pushViewController(gameViewController, animated: true)
             
         } else {
-           let alert = UIAlertController(title: "Error", message: "Please Select Number of Words.", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            let alert = UIAlertController(title: AppConstants.Error, message: AppConstants.SelecteNumberOfWordsMessage, preferredStyle: .alert)
+            let action = UIAlertAction(title: AppConstants.OK, style: .cancel, handler: nil)
             alert.addAction(action)
             self.present(alert, animated: true, completion: nil)
         }
