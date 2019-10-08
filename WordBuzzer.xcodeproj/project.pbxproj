@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C07C88FE234D359100A1F3D6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07C88FD234D359100A1F3D6 /* GradientView.swift */; };
 		C082053F23479CC700DCB094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082053E23479CC700DCB094 /* AppDelegate.swift */; };
 		C082054123479CC700DCB094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082054023479CC700DCB094 /* SceneDelegate.swift */; };
 		C082054323479CC700DCB094 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082054223479CC700DCB094 /* GameViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C07C88FD234D359100A1F3D6 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C082053B23479CC700DCB094 /* Word Buzzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word Buzzer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C082053E23479CC700DCB094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C082054023479CC700DCB094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				C0C14D17234BCBD5006A1516 /* UIView+Animation.swift */,
+				C07C88FD234D359100A1F3D6 /* GradientView.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			files = (
 				C08205542347DD3600DCB094 /* Player.swift in Sources */,
 				C08205582349B1C500DCB094 /* AppConstants.swift in Sources */,
+				C07C88FE234D359100A1F3D6 /* GradientView.swift in Sources */,
 				C082054323479CC700DCB094 /* GameViewController.swift in Sources */,
 				C0C14D1A234CD2A1006A1516 /* PopUpViewController.swift in Sources */,
 				C08205562347DDE100DCB094 /* Word.swift in Sources */,

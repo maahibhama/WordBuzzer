@@ -11,7 +11,7 @@
         <scene sceneID="55R-xr-pbL">
             <objects>
                 <viewController storyboardIdentifier="StartGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RhG-5I-wj3" customClass="StartGameViewController" customModule="Word_Buzzer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hWS-Gk-VtM">
+                    <view key="view" contentMode="scaleToFill" id="hWS-Gk-VtM" customClass="GradientView" customModule="Word_Buzzer" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -126,6 +126,14 @@
                             <constraint firstItem="JvH-4w-f2r" firstAttribute="centerY" secondItem="hWS-Gk-VtM" secondAttribute="centerY" id="HVH-wi-8z9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="grf-zz-eOZ"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="0.55686274509803924" green="0.1764705882352941" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.29019607843137252" green="0.0" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="Start Game" id="6Hd-y9-87E"/>
                     <connections>
@@ -144,7 +152,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="GameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="GameViewController" customModule="Word_Buzzer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="Word_Buzzer" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -372,7 +380,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="bKI-qq-wEj" firstAttribute="leading" secondItem="vOK-LT-NDO" secondAttribute="leading" constant="10" id="3Va-PN-NWd"/>
                                     <constraint firstItem="D92-1c-W9E" firstAttribute="centerY" secondItem="kz4-C4-Q54" secondAttribute="centerY" id="3qr-t8-h4n"/>
@@ -439,6 +446,14 @@
                             <constraint firstItem="vOK-LT-NDO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oQt-54-5Kq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="0.5568627451" green="0.1764705882" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.2901960784" green="0.0" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="Game" id="wsj-CV-es6"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -480,7 +495,7 @@
         <scene sceneID="GRK-H9-2ck">
             <objects>
                 <viewController storyboardIdentifier="EndGameViewController" title="Winner Screen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qrl-y8-hEZ" customClass="EndGameViewController" customModule="Word_Buzzer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pCN-bS-Slf">
+                    <view key="view" contentMode="scaleToFill" id="pCN-bS-Slf" customClass="GradientView" customModule="Word_Buzzer" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -550,6 +565,14 @@
                             <constraint firstItem="NGy-Wt-AJb" firstAttribute="width" secondItem="jSy-TJ-mLe" secondAttribute="width" id="prB-X2-EHp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jSy-TJ-mLe"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="0.5568627451" green="0.1764705882" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.2901960784" green="0.0" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
