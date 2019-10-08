@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		C082053F23479CC700DCB094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082053E23479CC700DCB094 /* AppDelegate.swift */; };
 		C082054123479CC700DCB094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082054023479CC700DCB094 /* SceneDelegate.swift */; };
-		C082054323479CC700DCB094 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082054223479CC700DCB094 /* ViewController.swift */; };
+		C082054323479CC700DCB094 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082054223479CC700DCB094 /* GameViewController.swift */; };
 		C082054623479CC700DCB094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C082054423479CC700DCB094 /* Main.storyboard */; };
 		C082054823479CC800DCB094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C082054723479CC800DCB094 /* Assets.xcassets */; };
 		C082054B23479CC800DCB094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C082054923479CC800DCB094 /* LaunchScreen.storyboard */; };
+		C08205542347DD3600DCB094 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08205532347DD3600DCB094 /* Player.swift */; };
+		C08205562347DDE100DCB094 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08205552347DDE100DCB094 /* Word.swift */; };
+		C08205582349B1C500DCB094 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08205572349B1C500DCB094 /* AppConstants.swift */; };
+		C082055B234A80A700DCB094 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = C082055A234A80A700DCB094 /* words.json */; };
+		C082055D234A80D100DCB094 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082055C234A80D100DCB094 /* Api.swift */; };
+		C0820561234B3EF300DCB094 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0820560234B3EF300DCB094 /* EndGameViewController.swift */; };
+		C0820564234B3F9B00DCB094 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0820563234B3F9B00DCB094 /* StartGameViewController.swift */; };
+		C0C14D18234BCBD5006A1516 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C14D17234BCBD5006A1516 /* UIView+Animation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C082053B23479CC700DCB094 /* WordBuzzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordBuzzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C082053B23479CC700DCB094 /* Word Buzzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word Buzzer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C082053E23479CC700DCB094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C082054023479CC700DCB094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C082054223479CC700DCB094 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C082054223479CC700DCB094 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C082054523479CC700DCB094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C082054723479CC800DCB094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C082054A23479CC800DCB094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C082054C23479CC800DCB094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C08205532347DD3600DCB094 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		C08205552347DDE100DCB094 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		C08205572349B1C500DCB094 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		C082055A234A80A700DCB094 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		C082055C234A80D100DCB094 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		C0820560234B3EF300DCB094 /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
+		C0820563234B3F9B00DCB094 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
+		C0C14D17234BCBD5006A1516 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +64,7 @@
 		C082053C23479CC700DCB094 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C082053B23479CC700DCB094 /* WordBuzzer.app */,
+				C082053B23479CC700DCB094 /* Word Buzzer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +72,63 @@
 		C082053D23479CC700DCB094 /* WordBuzzer */ = {
 			isa = PBXGroup;
 			children = (
+				C0D5CBA0234B406C008D67AC /* Constants */,
+				C0820565234B3FA700DCB094 /* Storyboard */,
+				C0820562234B3F7100DCB094 /* ViewControllers */,
+				C0820559234A808D00DCB094 /* Data */,
+				C08205522347DD1C00DCB094 /* Model */,
 				C082053E23479CC700DCB094 /* AppDelegate.swift */,
+				C0C14D17234BCBD5006A1516 /* UIView+Animation.swift */,
 				C082054023479CC700DCB094 /* SceneDelegate.swift */,
-				C082054223479CC700DCB094 /* ViewController.swift */,
-				C082054423479CC700DCB094 /* Main.storyboard */,
 				C082054723479CC800DCB094 /* Assets.xcassets */,
 				C082054923479CC800DCB094 /* LaunchScreen.storyboard */,
 				C082054C23479CC800DCB094 /* Info.plist */,
 			);
 			path = WordBuzzer;
+			sourceTree = "<group>";
+		};
+		C08205522347DD1C00DCB094 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C08205532347DD3600DCB094 /* Player.swift */,
+				C08205552347DDE100DCB094 /* Word.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C0820559234A808D00DCB094 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C082055C234A80D100DCB094 /* Api.swift */,
+				C082055A234A80A700DCB094 /* words.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C0820562234B3F7100DCB094 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C0820563234B3F9B00DCB094 /* StartGameViewController.swift */,
+				C082054223479CC700DCB094 /* GameViewController.swift */,
+				C0820560234B3EF300DCB094 /* EndGameViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C0820565234B3FA700DCB094 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C082054423479CC700DCB094 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		C0D5CBA0234B406C008D67AC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C08205572349B1C500DCB094 /* AppConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,7 +148,7 @@
 			);
 			name = WordBuzzer;
 			productName = WordBuzzer;
-			productReference = C082053B23479CC700DCB094 /* WordBuzzer.app */;
+			productReference = C082053B23479CC700DCB094 /* Word Buzzer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -126,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C082054B23479CC800DCB094 /* LaunchScreen.storyboard in Resources */,
+				C082055B234A80A700DCB094 /* words.json in Resources */,
 				C082054823479CC800DCB094 /* Assets.xcassets in Resources */,
 				C082054623479CC700DCB094 /* Main.storyboard in Resources */,
 			);
@@ -138,8 +203,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C082054323479CC700DCB094 /* ViewController.swift in Sources */,
+				C08205542347DD3600DCB094 /* Player.swift in Sources */,
+				C08205582349B1C500DCB094 /* AppConstants.swift in Sources */,
+				C082054323479CC700DCB094 /* GameViewController.swift in Sources */,
+				C08205562347DDE100DCB094 /* Word.swift in Sources */,
 				C082053F23479CC700DCB094 /* AppDelegate.swift in Sources */,
+				C0820564234B3F9B00DCB094 /* StartGameViewController.swift in Sources */,
+				C082055D234A80D100DCB094 /* Api.swift in Sources */,
+				C0820561234B3EF300DCB094 /* EndGameViewController.swift in Sources */,
+				C0C14D18234BCBD5006A1516 /* UIView+Animation.swift in Sources */,
 				C082054123479CC700DCB094 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +364,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maahi.WordBuzzer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Word Buzzer";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -310,7 +382,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maahi.WordBuzzer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Word Buzzer";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
