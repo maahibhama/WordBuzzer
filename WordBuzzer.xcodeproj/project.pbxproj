@@ -21,6 +21,7 @@
 		C0820561234B3EF300DCB094 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0820560234B3EF300DCB094 /* EndGameViewController.swift */; };
 		C0820564234B3F9B00DCB094 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0820563234B3F9B00DCB094 /* StartGameViewController.swift */; };
 		C0C14D18234BCBD5006A1516 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C14D17234BCBD5006A1516 /* UIView+Animation.swift */; };
+		C0C14D1A234CD2A1006A1516 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C14D19234CD2A1006A1516 /* PopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C0820560234B3EF300DCB094 /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
 		C0820563234B3F9B00DCB094 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
 		C0C14D17234BCBD5006A1516 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
+		C0C14D19234CD2A1006A1516 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				C0820563234B3F9B00DCB094 /* StartGameViewController.swift */,
 				C082054223479CC700DCB094 /* GameViewController.swift */,
 				C0820560234B3EF300DCB094 /* EndGameViewController.swift */,
+				C0C14D19234CD2A1006A1516 /* PopUpViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				C08205542347DD3600DCB094 /* Player.swift in Sources */,
 				C08205582349B1C500DCB094 /* AppConstants.swift in Sources */,
 				C082054323479CC700DCB094 /* GameViewController.swift in Sources */,
+				C0C14D1A234CD2A1006A1516 /* PopUpViewController.swift in Sources */,
 				C08205562347DDE100DCB094 /* Word.swift in Sources */,
 				C082053F23479CC700DCB094 /* AppDelegate.swift in Sources */,
 				C0820564234B3F9B00DCB094 /* StartGameViewController.swift in Sources */,

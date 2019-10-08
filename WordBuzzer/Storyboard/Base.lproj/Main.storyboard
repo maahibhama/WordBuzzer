@@ -10,7 +10,7 @@
         <!--Start Game-->
         <scene sceneID="55R-xr-pbL">
             <objects>
-                <viewController storyboardIdentifier="StartGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RhG-5I-wj3" customClass="StartGameViewController" customModule="WordBuzzer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RhG-5I-wj3" customClass="StartGameViewController" customModule="Word_Buzzer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hWS-Gk-VtM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +143,7 @@
         <!--Game-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="GameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="GameViewController" customModule="WordBuzzer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="GameViewController" customModule="Word_Buzzer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -454,6 +454,7 @@
                         <outlet property="fourthPlayerPrizeImageView" destination="CRv-9s-oRh" id="biq-Xv-4Hz"/>
                         <outlet property="fourthPlayerRWImage" destination="Pmw-XB-kp4" id="2E2-9G-Sn7"/>
                         <outlet property="fourthPlayerScoreLabel" destination="VFV-Re-fAV" id="K3r-tn-gi1"/>
+                        <outlet property="mainView" destination="vOK-LT-NDO" id="HpO-Nf-hQc"/>
                         <outlet property="mainWordLabel" destination="yOx-jL-CbH" id="Hku-FX-CYt"/>
                         <outlet property="nextWordButton" destination="5hw-bO-MGj" id="bwK-v1-Qq3"/>
                         <outlet property="numberOfWordLabel" destination="AWN-mH-oSO" id="mJm-Fa-6dW"/>
@@ -478,7 +479,7 @@
         <!--Winner Screen-->
         <scene sceneID="GRK-H9-2ck">
             <objects>
-                <viewController storyboardIdentifier="EndGameViewController" title="Winner Screen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qrl-y8-hEZ" customClass="EndGameViewController" customModule="WordBuzzer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EndGameViewController" title="Winner Screen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qrl-y8-hEZ" customClass="EndGameViewController" customModule="Word_Buzzer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pCN-bS-Slf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -562,6 +563,114 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3R-w0-Bqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2784.057971014493" y="104.46428571428571"/>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="ehw-6f-roS">
+            <objects>
+                <viewController storyboardIdentifier="PopUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8TF-rH-sne" customClass="PopUpViewController" customModule="Word_Buzzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PyT-de-Jtk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEq-JJ-mJm">
+                                <rect key="frame" x="41.5" y="326" width="331" height="244"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Words:  5/20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcp-fZ-mjs">
+                                        <rect key="frame" x="62.5" y="20" width="206" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="mva-km-Hxu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGA-Zc-jcR">
+                                        <rect key="frame" x="15" y="70" width="25" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="Bur-n6-hEb"/>
+                                            <constraint firstAttribute="height" constant="30" id="VGP-N6-j3U"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSs-pP-TyM">
+                                        <rect key="frame" x="55" y="70.5" width="261" height="29"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                        <color key="textColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0J3-yr-Vqa">
+                                        <rect key="frame" x="15" y="120" width="25" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="NVm-x6-H1B"/>
+                                            <constraint firstAttribute="width" constant="25" id="zBr-L8-XH3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbd-Ds-8Gk">
+                                        <rect key="frame" x="55" y="120.5" width="261" height="29"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                        <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="363-c2-0l2">
+                                        <rect key="frame" x="40.5" y="175" width="250" height="49"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="295-zn-r4V"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                        <state key="normal" title="Next Word">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextWordButtonAction:" destination="8TF-rH-sne" eventType="touchUpInside" id="k6e-Ak-RXg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Xcp-fZ-mjs" firstAttribute="top" secondItem="mEq-JJ-mJm" secondAttribute="top" constant="20" id="1Hc-pu-9zy"/>
+                                    <constraint firstAttribute="trailing" secondItem="OSs-pP-TyM" secondAttribute="trailing" constant="15" id="6gl-YX-clO"/>
+                                    <constraint firstAttribute="bottom" secondItem="363-c2-0l2" secondAttribute="bottom" constant="20" id="A1i-11-M4N"/>
+                                    <constraint firstItem="gbd-Ds-8Gk" firstAttribute="leading" secondItem="0J3-yr-Vqa" secondAttribute="trailing" constant="15" id="CHe-FC-GRw"/>
+                                    <constraint firstItem="0J3-yr-Vqa" firstAttribute="leading" secondItem="mEq-JJ-mJm" secondAttribute="leading" constant="15" id="Clr-oL-oqE"/>
+                                    <constraint firstItem="gbd-Ds-8Gk" firstAttribute="centerY" secondItem="0J3-yr-Vqa" secondAttribute="centerY" id="Q3r-nK-Xm8"/>
+                                    <constraint firstItem="363-c2-0l2" firstAttribute="centerX" secondItem="mEq-JJ-mJm" secondAttribute="centerX" id="Rwg-Z9-lqr"/>
+                                    <constraint firstItem="NGA-Zc-jcR" firstAttribute="leading" secondItem="mEq-JJ-mJm" secondAttribute="leading" constant="15" id="UF2-Ns-gRe"/>
+                                    <constraint firstItem="NGA-Zc-jcR" firstAttribute="top" secondItem="Xcp-fZ-mjs" secondAttribute="bottom" constant="20" id="bl3-XT-a34"/>
+                                    <constraint firstAttribute="trailing" secondItem="gbd-Ds-8Gk" secondAttribute="trailing" constant="15" id="heg-sM-KvU"/>
+                                    <constraint firstItem="Xcp-fZ-mjs" firstAttribute="centerX" secondItem="mEq-JJ-mJm" secondAttribute="centerX" id="q5d-kL-Ebg"/>
+                                    <constraint firstItem="OSs-pP-TyM" firstAttribute="leading" secondItem="NGA-Zc-jcR" secondAttribute="trailing" constant="15" id="rKw-FY-3w6"/>
+                                    <constraint firstItem="363-c2-0l2" firstAttribute="top" secondItem="0J3-yr-Vqa" secondAttribute="bottom" constant="25" id="wB0-d0-4Jn"/>
+                                    <constraint firstItem="0J3-yr-Vqa" firstAttribute="top" secondItem="NGA-Zc-jcR" secondAttribute="bottom" constant="20" id="ysj-Ak-WhW"/>
+                                    <constraint firstItem="OSs-pP-TyM" firstAttribute="centerY" secondItem="NGA-Zc-jcR" secondAttribute="centerY" id="zxE-hK-JS3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.29722281678082191" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mEq-JJ-mJm" firstAttribute="centerX" secondItem="PyT-de-Jtk" secondAttribute="centerX" id="E29-4u-855"/>
+                            <constraint firstItem="mEq-JJ-mJm" firstAttribute="centerY" secondItem="PyT-de-Jtk" secondAttribute="centerY" id="f2S-dz-sd7"/>
+                            <constraint firstItem="mEq-JJ-mJm" firstAttribute="width" secondItem="iiR-tp-aQB" secondAttribute="width" multiplier="0.8" id="vH2-Tq-Acu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iiR-tp-aQB"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerWordLabel" destination="gbd-Ds-8Gk" id="PGB-cv-NQ7"/>
+                        <outlet property="nextWordButton" destination="363-c2-0l2" id="7ic-rZ-LiZ"/>
+                        <outlet property="numberOfWordLabel" destination="Xcp-fZ-mjs" id="ssc-UF-kVd"/>
+                        <outlet property="popUpView" destination="mEq-JJ-mJm" id="RJc-tF-e5A"/>
+                        <outlet property="questionWordLabel" destination="OSs-pP-TyM" id="WPN-1J-KCZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xXL-UU-hAw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3628.985507246377" y="139.95535714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pG1-4s-e5z">
