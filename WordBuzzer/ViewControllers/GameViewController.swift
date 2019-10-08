@@ -13,6 +13,8 @@ class GameViewController: UIViewController {
     
     //MARK:- Interface Builder Outlets
     
+    @IBOutlet weak var mainView: UIView!
+    
     //First Player
     @IBOutlet weak var firstPlayerButton: UIButton!
     @IBOutlet weak var firstPlayerNameLabel: UILabel!
@@ -78,6 +80,10 @@ class GameViewController: UIViewController {
         didSet{
             let title = self.isFirstTime ? "Start Game" : "Next Word"
             self.nextWordButton.setTitle(title, for: .normal)
+            endGameButton.isHidden = self.isFirstTime
+            if self.isFirstTime == false {
+                self.navigationItem.setHidesBackButton(true, animated:true);
+            }
         }
     }
     
@@ -134,6 +140,8 @@ class GameViewController: UIViewController {
     
     var seenIndex = [Int]()
     
+    var isOnGameScreen = true
+    
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -142,6 +150,11 @@ class GameViewController: UIViewController {
         
         self.setUpPlayer()
         
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        isOnGameScreen = false
     }
     
     
@@ -182,14 +195,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func nextWordButtonAction(_ sender: UIButton) {
-        self.isFirstTime = false
-        self.removePlayerData()
-        self.hideShowAllImageView(isHidden: true)
-        self.winnerPlayer = nil
-        self.wordCount += 1
-        self.invalidPlayerListTillNextWord = []
-        self.enableUserInteractionAllPlayer()
-        self.startTimer()
+        self.nextWord()
     }
     
     @IBAction func endGameButtonAction(_ sender: UIButton) {
@@ -199,35 +205,45 @@ class GameViewController: UIViewController {
     @objc func timerAction() {
         
         if self.isRightTranslation(){
-            
+            self.randomWordButton.setTitleColor(.black, for: .normal)
+            self.randomWordButton.backgroundColor = .green
             if self.buttonSelectedTime.count > 0 {
                 self.whoClickedFirst()
             }else {
+                self.showPopOverView()
                 self.disableAllPlayerInteractionTillNextWord()
                 self.hideShowAllImageView(isHidden: false)
                 self.setAllPlayerWrongAnswer()
             }
         } else if self.buttonSelectedTime.count > 0 && self.invalidPlayerListTillNextWord.count != 4 {
             disableUserInteractionTillNextWord()
+            if self.invalidPlayerListTillNextWord.count != 4 {
                 self.currentRandomWord = chooseRandom()
                 self.buttonSelectedTime = [:]
                 self.startTimer()
-        } else if self.invalidPlayerListTillNextWord.count != 4 {
-                self.currentRandomWord = chooseRandom()
-                self.buttonSelectedTime = [:]
-                self.startTimer()
+            }else {
+               self.showPopOverView()
+            }
+        }else {
+            self.currentRandomWord = chooseRandom()
+            self.buttonSelectedTime = [:]
+            self.startTimer()
         }
     }
     
     
     //MARK:- Helper Methods
     func setupInitialUI(){
-        self.navigationItem.setHidesBackButton(true, animated:true);
         randomWordButton.layer.cornerRadius = randomWordButton.frame.height / 2.0
         randomWordButton.isUserInteractionEnabled = false
         nextWordButton.layer.cornerRadius = 4.0
+        endGameButton.layer.cornerRadius = 4.0
         if isFirstTime {
+            endGameButton.isHidden = isFirstTime
             nextWordButton.setTitle("Start Game", for: .normal)
+            disableAllPlayerInteractionTillNextWord()
+        } else {
+            self.navigationItem.setHidesBackButton(true, animated:true);
         }
         mainWordLabel.text = ""
         randomWordButton.setTitle("", for: .normal)
@@ -270,8 +286,6 @@ class GameViewController: UIViewController {
         self.taskStartTimer.invalidate()
         self.taskStartTimer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(self.timerAction), userInfo: nil, repeats: false)
     }
-    
-   
     
     func updatePlayerInfo() {
         for i in 0..<playerArray.count {
@@ -439,7 +453,7 @@ class GameViewController: UIViewController {
     }
     
     func disableUserInteractionTillNextWord() {
-        var disbalePlayer:[Player] = []
+        var disbalePlayer:[Player] = invalidPlayerListTillNextWord
         for (key, _) in self.buttonSelectedTime {
             switch key {
             case "1":
@@ -496,6 +510,7 @@ class GameViewController: UIViewController {
     }
     
     func moveNameOffScreen() {
+        self.disableAllPlayerInteractionTillNextWord()
         self.randomWordConstraint.constant = -50
         self.view.layoutIfNeeded()
     }
@@ -503,9 +518,60 @@ class GameViewController: UIViewController {
     func moveNameOnScreen() {
         self.view.layoutIfNeeded()
         UIView.animate(withDuration: 1.0) {
+            self.enableThoseWhoAreNotDisableTillNextWord()
             self.randomWordConstraint.constant = 150
             self.view.layoutIfNeeded()
         }
+    }
+    
+    func enableThoseWhoAreNotDisableTillNextWord(){
+        var enablePlayers = playerArray
+        let disablePlayer = invalidPlayerListTillNextWord
+        enablePlayers = Array(Set(enablePlayers).subtracting(disablePlayer))
+        for player in enablePlayers {
+            switch player.id {
+            case "1":
+                playerButtonEnable(button: firstPlayerButton, isEnable: true)
+            case "2":
+                playerButtonEnable(button: secondPlayerButton, isEnable: true)
+            case "3":
+                playerButtonEnable(button: thirdPlayerButton, isEnable: true)
+            case "4":
+                playerButtonEnable(button: fourthPlayerButton, isEnable: true)
+            default:
+                print("Invalid")
+            }
+        }
+    }
+    
+    func nextWord() {
+        self.randomWordButton.backgroundColor = .black
+        self.randomWordButton.setTitleColor(.white, for: .normal)
+        self.isFirstTime = false
+        self.removePlayerData()
+        self.hideShowAllImageView(isHidden: true)
+        self.winnerPlayer = nil
+        self.wordCount += 1
+        self.invalidPlayerListTillNextWord = []
+        //self.enableUserInteractionAllPlayer()
+        self.startTimer()
+    }
+    
+    //
+    func showPopOverView() {
+        guard isOnGameScreen else {
+            return
+        }
+        let popOverVC: PopUpViewController = self.storyboard?.instantiateViewController(withIdentifier: "PopUpViewController") as! PopUpViewController
+        popOverVC.currentWordsNumber = wordCount
+        popOverVC.numberOfWords = self.wordsArray.count
+        popOverVC.word = currentWord
+        popOverVC.onClickNextButton = {  
+            self.nextWord()
+        }
+        popOverVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        self.navigationController?.present(popOverVC, animated: true)
+            
     }
 }
 
