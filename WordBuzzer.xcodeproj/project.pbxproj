@@ -55,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C06D7692234D255500E0FAA6 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C0C14D17234BCBD5006A1516 /* UIView+Animation.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		C082053223479CC700DCB094 = {
 			isa = PBXGroup;
 			children = (
@@ -74,13 +82,13 @@
 		C082053D23479CC700DCB094 /* WordBuzzer */ = {
 			isa = PBXGroup;
 			children = (
+				C06D7692234D255500E0FAA6 /* Helper */,
 				C0D5CBA0234B406C008D67AC /* Constants */,
 				C0820565234B3FA700DCB094 /* Storyboard */,
 				C0820562234B3F7100DCB094 /* ViewControllers */,
 				C0820559234A808D00DCB094 /* Data */,
 				C08205522347DD1C00DCB094 /* Model */,
 				C082053E23479CC700DCB094 /* AppDelegate.swift */,
-				C0C14D17234BCBD5006A1516 /* UIView+Animation.swift */,
 				C082054023479CC700DCB094 /* SceneDelegate.swift */,
 				C082054723479CC800DCB094 /* Assets.xcassets */,
 				C082054923479CC800DCB094 /* LaunchScreen.storyboard */,
