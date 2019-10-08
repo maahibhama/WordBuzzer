@@ -41,4 +41,9 @@ struct AppConstants {
     }
     
     static let NoWinner = "No Winner"
+    
+    static let QuitGameMessage = "Are you sure you want to quit?"
+    
+    static let Yes = "Yes"
+    static let No = "No"
 }

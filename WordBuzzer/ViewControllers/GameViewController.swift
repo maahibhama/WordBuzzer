@@ -201,7 +201,19 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func endGameButtonAction(_ sender: UIButton) {
-        self.endGame()
+        self.taskStartTimer.invalidate()
+        let alert = UIAlertController(title: AppConstants.QuitGameMessage, message: nil, preferredStyle: .alert)
+        let action = UIAlertAction(title: AppConstants.Yes, style: .default) { (_) in
+            self.endGame()
+        }
+        alert.addAction(action)
+        
+        let cancelAction = UIAlertAction(title: AppConstants.No, style: .cancel) { (_) in
+            self.nextWord()
+        }
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     
