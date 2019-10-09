@@ -9,6 +9,12 @@
 import Foundation
 
 struct AppConstants {
+    static let NumberOfWord = "Number of Words"
+    static let TwentyWords = "20 Words"
+    static let FortyWords = "40 Words"
+    static let SixtyWords = "60 Words"
+    static let EightyWords = "80 Words"
+    
     static let FirstPlayerKey = "1"
     static let SecondPlayerKey = "2"
     static let ThirdPlayerKey = "3"
