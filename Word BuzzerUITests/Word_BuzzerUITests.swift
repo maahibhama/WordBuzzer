@@ -164,10 +164,60 @@ class Word_BuzzerUITests: XCTestCase {
         XCTAssert(thirdPlayerButton.isEnabled)
         XCTAssert(fourthPlayerButton.isEnabled)
         
-        firstPlayerButton.tap()
-        secondPlayerButton.tap()
-        thirdPlayerButton.tap()
-        fourthPlayerButton.tap()
+        //firstPlayerButton.tap()
+        //secondPlayerButton.tap()
+        //thirdPlayerButton.tap()
+        //fourthPlayerButton.tap()
+        
+    }
+    
+    func testGameScreenQuitAlert() {
+        let app = XCUIApplication()
+        app.buttons["20 Words"].tap()
+        app.buttons["Start Game"].tap()
+        app.buttons["GameStartGameButton"].tap()
+        let quitGameButton = app.buttons["quitGameButton"]
+        XCTAssert(quitGameButton.exists)
+        quitGameButton.tap()
+        let alert = app.alerts["Are you sure you want to quit?"]
+        let alertYes = alert.buttons["Yes"]
+        let alertNo = alert.buttons["No"]
+        
+        XCTAssert(alert.exists)
+        XCTAssert(alertYes.exists)
+        XCTAssert(alertNo.exists)
+    }
+    
+    func testGameScreenQuitAlertYesClick() {
+        let app = XCUIApplication()
+        app.buttons["20 Words"].tap()
+        app.buttons["Start Game"].tap()
+        app.buttons["GameStartGameButton"].tap()
+        let quitGameButton = app.buttons["quitGameButton"]
+        XCTAssert(quitGameButton.exists)
+        quitGameButton.tap()
+        
+        let alert = app.alerts["Are you sure you want to quit?"]
+        let alertYes = alert.buttons["Yes"]
+        alertYes.tap()
+        
+        //Navigation Value
+        XCTAssert(app.navigationBars["Winner Screen"].exists)
+        
+        //No Winner
+        XCTAssert(app.staticTexts["No Winner"].exists)
+    }
+    
+    func testNewGameStart() {
+        testGameScreenQuitAlertYesClick()
+        
+        let app = XCUIApplication()
+        let startNewGame = app.buttons["Start New Game"]
+        XCTAssert(startNewGame.exists)
+        startNewGame.tap()
+        
+        //Navigation Value
+        XCTAssert(app.navigationBars["Start Game"].exists)
         
     }
     
