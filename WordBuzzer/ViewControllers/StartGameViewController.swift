@@ -13,6 +13,8 @@ class StartGameViewController: UIViewController {
     
     //MARK:- Interface Builder Actions
     
+    @IBOutlet weak var numberOfWordsLabel: UILabel!
+    
     // Number of Words
     @IBOutlet weak var twentyPlayerButton: UIButton!
     
@@ -97,16 +99,17 @@ class StartGameViewController: UIViewController {
     
     //MARK:- UI Helper Methods
     private func setupUI() {
+        numberOfWordsLabel.text = AppConstants.NumberOfWord
         
-        setUpbuttonSelected(sender: twentyPlayerButton)
-        setUpbuttonSelected(sender: fourtyPlayersButton)
-        setUpbuttonSelected(sender: sixtyPlayersButton)
-        setUpbuttonSelected(sender: eightyPlayersButton)
+        setUpbuttonSelected(sender: twentyPlayerButton, name: AppConstants.TwentyWords)
+        setUpbuttonSelected(sender: fourtyPlayersButton, name: AppConstants.FortyWords)
+        setUpbuttonSelected(sender: sixtyPlayersButton, name: AppConstants.SixtyWords)
+        setUpbuttonSelected(sender: eightyPlayersButton, name: AppConstants.EightyWords)
         
         gameStartButton.layer.cornerRadius = 4.0
     }
     
-    private func setUpbuttonSelected(sender: UIButton) {
+    private func setUpbuttonSelected(sender: UIButton, name: String) {
         sender.layer.cornerRadius = 4.0
         sender.setImage(nil, for: .normal)
     }
