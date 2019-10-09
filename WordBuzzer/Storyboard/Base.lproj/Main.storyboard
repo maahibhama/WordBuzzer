@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JO0-8k-9A1">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JO0-8k-9A1">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,7 +40,7 @@
                                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
                                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                        <state key="normal" title="20 words" image="checkRound"/>
+                                                        <state key="normal" title="20 Words" image="checkRound"/>
                                                         <connections>
                                                             <action selector="twentyPlayerButtonAction:" destination="RhG-5I-wj3" eventType="touchUpInside" id="WJ0-hk-Uz3"/>
                                                         </connections>
@@ -54,7 +52,7 @@
                                                         <inset key="contentEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                        <state key="normal" title="40 words" image="checkRound"/>
+                                                        <state key="normal" title="40 Words" image="checkRound"/>
                                                         <connections>
                                                             <action selector="fourtyPlayersButtonAction:" destination="RhG-5I-wj3" eventType="touchUpInside" id="wdJ-ti-auY"/>
                                                         </connections>
@@ -143,6 +141,7 @@
                         <outlet property="eightyPlayersButton" destination="diE-MJ-6RQ" id="C5T-zO-0bc"/>
                         <outlet property="fourtyPlayersButton" destination="vOU-Mo-dNn" id="ocF-6L-hmC"/>
                         <outlet property="gameStartButton" destination="Ek0-gB-6mu" id="vp3-Ag-x1R"/>
+                        <outlet property="numberOfWordsLabel" destination="bUC-E1-tsx" id="4NS-db-Whf"/>
                         <outlet property="sixtyPlayersButton" destination="ja1-1U-VJC" id="zdy-dS-R9E"/>
                         <outlet property="twentyPlayerButton" destination="BPh-Of-Ic4" id="pbr-hR-Ycn"/>
                     </connections>
@@ -160,7 +159,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOK-LT-NDO">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYY-31-94S" customClass="LinearProgressView" customModule="Word_Buzzer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="5"/>
@@ -188,6 +187,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGt-CW-RbE">
                                         <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="firstPlayerButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="6tO-sy-PaX"/>
                                             <constraint firstAttribute="width" constant="50" id="EKb-VD-htR"/>
@@ -200,12 +200,14 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynv-4A-5DI">
                                         <rect key="frame" x="10" y="102" width="287.5" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="firstPlayerScore"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st Player " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKI-qq-wEj">
                                         <rect key="frame" x="10" y="70" width="250" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="firstPlayerName"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -213,6 +215,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkRound" translatesAutoresizingMaskIntoConstraints="NO" id="iCk-Bc-9Zl">
                                         <rect key="frame" x="80" y="20" width="30" height="30"/>
                                         <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="firstPlayerRWImage"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Myp-YN-4dB"/>
                                             <constraint firstAttribute="width" constant="30" id="gLu-xV-K2l"/>
@@ -221,6 +224,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prize" translatesAutoresizingMaskIntoConstraints="NO" id="27j-jD-0Jq">
                                         <rect key="frame" x="118" y="20" width="30" height="30"/>
                                         <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="firstPlayerPrize"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="886-So-h7p"/>
                                             <constraint firstAttribute="width" constant="30" id="nim-U2-qEb"/>
@@ -228,6 +232,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqb-Op-I5W">
                                         <rect key="frame" x="315" y="10" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="secondPlayerButton"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="4du-9H-b9D"/>
                                             <constraint firstAttribute="height" constant="50" id="GHG-26-RBb"/>
@@ -240,12 +245,14 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="2nd Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aC-lj-WB7">
                                         <rect key="frame" x="270" y="70" width="95" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="secondPlayerName"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Score:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pg-OH-5y6">
                                         <rect key="frame" x="307.5" y="102" width="57.5" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="secondPlayerScore"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -253,6 +260,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cancelRound" translatesAutoresizingMaskIntoConstraints="NO" id="kz4-C4-Q54">
                                         <rect key="frame" x="265" y="20" width="30" height="30"/>
                                         <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="secondPlayerRWImage"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Eu5-1F-8js"/>
                                             <constraint firstAttribute="height" constant="30" id="ape-BW-W2I"/>
@@ -261,13 +269,15 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prize" translatesAutoresizingMaskIntoConstraints="NO" id="D92-1c-W9E">
                                         <rect key="frame" x="227" y="20" width="30" height="30"/>
                                         <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="secondPlayerPrize"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="o3I-zu-0qE"/>
                                             <constraint firstAttribute="height" constant="30" id="t3b-Ym-kaL"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xY-md-Ryp">
-                                        <rect key="frame" x="10" y="543" width="50" height="50"/>
+                                        <rect key="frame" x="10" y="563" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="thirdPlayerButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="FdH-bQ-fY1"/>
                                             <constraint firstAttribute="width" constant="50" id="hci-P4-ujc"/>
@@ -279,35 +289,40 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3rd Player " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pI0-K9-SUT">
-                                        <rect key="frame" x="10" y="509" width="253.5" height="24"/>
+                                        <rect key="frame" x="10" y="529" width="253.5" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="thirdPlayerName"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rm2-ce-JUH">
-                                        <rect key="frame" x="10" y="477" width="57.5" height="24"/>
+                                        <rect key="frame" x="10" y="497" width="57.5" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="thirdPlayerScore"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cancelRound" translatesAutoresizingMaskIntoConstraints="NO" id="Bfp-mx-ghJ">
-                                        <rect key="frame" x="80" y="553" width="30" height="30"/>
+                                        <rect key="frame" x="80" y="573" width="30" height="30"/>
                                         <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="thirdPlayerRWImage"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="C9v-d8-V1g"/>
                                             <constraint firstAttribute="height" constant="30" id="Z8N-FX-NgI"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prize" translatesAutoresizingMaskIntoConstraints="NO" id="939-1N-JM1">
-                                        <rect key="frame" x="118" y="553" width="30" height="30"/>
+                                        <rect key="frame" x="118" y="573" width="30" height="30"/>
                                         <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="thirdPlayerPrize"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Fed-Qq-yzI"/>
                                             <constraint firstAttribute="height" constant="30" id="oBZ-FU-l7V"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aY1-cF-ImJ">
-                                        <rect key="frame" x="315" y="543" width="50" height="50"/>
+                                        <rect key="frame" x="315" y="563" width="50" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="fourthPlayerButton"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="M2O-tp-jT1"/>
                                             <constraint firstAttribute="height" constant="50" id="fuJ-Hk-Zbb"/>
@@ -319,38 +334,43 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="4th Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1y-gz-r15">
-                                        <rect key="frame" x="273.5" y="509" width="91.5" height="24"/>
+                                        <rect key="frame" x="273.5" y="529" width="91.5" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="fourthPlayerName"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFV-Re-fAV">
-                                        <rect key="frame" x="307.5" y="477" width="57.5" height="24"/>
+                                        <rect key="frame" x="307.5" y="497" width="57.5" height="24"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="fourthPlayerScore"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cancelRound" translatesAutoresizingMaskIntoConstraints="NO" id="Pmw-XB-kp4">
-                                        <rect key="frame" x="265" y="553" width="30" height="30"/>
+                                        <rect key="frame" x="265" y="573" width="30" height="30"/>
                                         <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="fourthPlayerRWImage"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Xa7-wd-1mV"/>
                                             <constraint firstAttribute="width" constant="30" id="oHC-Sz-baj"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prize" translatesAutoresizingMaskIntoConstraints="NO" id="CRv-9s-oRh">
-                                        <rect key="frame" x="227" y="553" width="30" height="30"/>
+                                        <rect key="frame" x="227" y="573" width="30" height="30"/>
                                         <color key="tintColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="fourthPlayerPrize"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="9bt-h1-YJv"/>
                                             <constraint firstAttribute="height" constant="30" id="Yu0-0Z-KEw"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYV-A0-ADs">
-                                        <rect key="frame" x="10" y="143" width="355" height="317"/>
+                                        <rect key="frame" x="10" y="153" width="355" height="317"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Words:  5/20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWN-mH-oSO">
                                                 <rect key="frame" x="74.5" y="143.5" width="206" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="numberOfWords"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="aBj-yc-U3w"/>
                                                 </constraints>
@@ -360,6 +380,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hw-bO-MGj">
                                                 <rect key="frame" x="52.5" y="188.5" width="250" height="49"/>
                                                 <color key="backgroundColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="GameStartGameButton"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="FIA-pp-dFD"/>
                                                 </constraints>
@@ -375,6 +396,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5j-yj-W2A">
                                                 <rect key="frame" x="52.5" y="257.5" width="250" height="49"/>
                                                 <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="quitGameButton"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="hVA-MC-8ty"/>
                                                 </constraints>
@@ -389,6 +411,7 @@
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOx-jL-CbH">
                                                 <rect key="frame" x="110" y="97" width="135" height="36.5"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="mainWordLabel"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="36.5" id="o9D-fZ-1eN"/>
                                                 </constraints>
@@ -413,6 +436,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbj-nr-C89">
                                         <rect key="frame" x="94" y="180" width="187" height="44"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="randomWordButton"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
                                         <state key="normal" title=" sbcvsjhchscsnc ">
@@ -541,7 +565,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGy-Wt-AJb">
-                                <rect key="frame" x="0.0" y="151" width="375" height="429"/>
+                                <rect key="frame" x="0.0" y="141" width="375" height="429"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQ4-hc-AwM">
                                         <rect key="frame" x="62.5" y="370" width="250" height="49"/>
@@ -694,6 +718,7 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="popUpView"/>
                                 <constraints>
                                     <constraint firstItem="Xcp-fZ-mjs" firstAttribute="top" secondItem="mEq-JJ-mJm" secondAttribute="top" constant="20" id="1Hc-pu-9zy"/>
                                     <constraint firstAttribute="trailing" secondItem="OSs-pP-TyM" secondAttribute="trailing" constant="15" id="6gl-YX-clO"/>
@@ -739,7 +764,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JO0-8k-9A1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mzf-RT-ews">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
