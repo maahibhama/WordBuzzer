@@ -38,7 +38,7 @@ class EndGameViewController: UIViewController {
     
     
     //MARK:- Helper
-    func setUpUI() {
+    private func setUpUI() {
         self.navigationItem.setHidesBackButton(true, animated:true)
         if let player = winnerPlayer {
             winnerNameLabel.text = player.name

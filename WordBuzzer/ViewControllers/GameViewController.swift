@@ -65,31 +65,34 @@ class GameViewController: UIViewController {
     
     var numberOfPlayer: Int = 4
     
+    var allSpanishWords:[String] = []
+    
     //Player Score Model
-    var playerArray:[Player] = []
+    private var playerArray:[Player] = []
     
-    var selectedPlayersWithTime:[String:Date] = [:]
+    private var selectedPlayersWithTime:[String:Date] = [:]
     
-    var taskStartTimer: Timer = Timer()
+    private var taskStartTimer: Timer = Timer()
     
-    var winnerPlayer: Player? {
+    private var winnerPlayer: Player? {
         didSet {
             self.hidePrizePlayer(expectPlayer: self.winnerPlayer)
         }
     }
     
-    var isFirstTime: Bool = true {
+    private var isFirstTime: Bool = true {
         didSet{
             let title = self.isFirstTime ? AppConstants.StartGame : AppConstants.NextWord
             self.nextWordButton.setTitle(title, for: .normal)
             endGameButton.isHidden = self.isFirstTime
             if self.isFirstTime == false {
                 self.navigationItem.setHidesBackButton(true, animated:true);
+                self.navigationController?.setNavigationBarHidden(true, animated: true)
             }
         }
     }
     
-    var wordCount: Int = 0 {
+    private var wordCount: Int = 0 {
         didSet{
             if wordsArray.count >= self.wordCount, self.wordCount >= 0 {
                 self.currentWord = wordsArray[self.wordCount - 1]
@@ -100,7 +103,7 @@ class GameViewController: UIViewController {
         }
     }
     
-    var currentWord: Word? {
+    private var currentWord: Word? {
         didSet {
             if let currentWord = self.currentWord {
                 mainWordLabel.text = currentWord.textEnglish.uppercased()
@@ -109,23 +112,21 @@ class GameViewController: UIViewController {
         }
     }
     
-    var randomSpanishWords:[String] = []{
+    private var randomSpanishWords:[String] = []{
         didSet{
             seenIndex = []
             self.currentRandomWord = chooseRandom()
         }
     }
     
-    var allSpanishWords:[String] = []
-    
-    var invalidPlayerListTillNextWord:[Player] = [] {
+    private var invalidPlayerListTillNextWord:[Player] = [] {
         didSet{
             self.updateEliminatePlayerImageView()
             
         }
     }
     
-    var currentRandomWord: String = "" {
+    private var currentRandomWord: String = "" {
         didSet {
             self.moveNameOffScreen()
             self.randomWordButton.fadeOut(completion: {
@@ -140,9 +141,9 @@ class GameViewController: UIViewController {
         }
     }
     
-    var seenIndex = [Int]()
+    private var seenIndex = [Int]()
     
-    var isOnGameScreen = true
+    private var isOnGameScreen = true
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -218,7 +219,7 @@ class GameViewController: UIViewController {
     
     
     //MARK:- Timer Function Actions
-    func startTimer() {
+    private func startTimer() {
         self.taskStartTimer.invalidate()
         self.taskStartTimer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(self.timerAction), userInfo: nil, repeats: false)
     }
@@ -253,7 +254,7 @@ class GameViewController: UIViewController {
     
     
     //MARK:- Helper UI Methods
-    func setupInitialUI(){
+    private func setupInitialUI(){
         randomWordButton.layer.cornerRadius = randomWordButton.frame.height / 2.0
         randomWordButton.isUserInteractionEnabled = false
         nextWordButton.layer.cornerRadius = 4.0
@@ -272,7 +273,7 @@ class GameViewController: UIViewController {
         progressBar.animationDuration = 3.0
     }
     
-    func nextWord() {
+    private func nextWord() {
         self.randomWordButton.backgroundColor = .black
         self.randomWordButton.setTitleColor(.white, for: .normal)
         self.isFirstTime = false
@@ -285,7 +286,7 @@ class GameViewController: UIViewController {
         self.startTimer()
     }
     
-    func updatePlayerInfo() {
+    private func updatePlayerInfo() {
         for i in 0..<playerArray.count {
             let player = playerArray[i]
             let playerName = player.name
@@ -312,14 +313,14 @@ class GameViewController: UIViewController {
     
     
     //MARK:- Player Wrong/Right/Prize Image View Methods
-    func hideShowAllImageView(isHidden: Bool) {
+    private func hideShowAllImageView(isHidden: Bool) {
         firstPlayerRWImage.isHidden = isHidden
         secondPlayerRWImage.isHidden = isHidden
         thirdPlayerRWImage.isHidden = isHidden
         fourthPlayerRWImage.isHidden = isHidden
     }
     
-    func allPlayerAnswerRightOrWrong() {
+    private func allPlayerAnswerRightOrWrong() {
         self.setAllPlayerWrongAnswer()
         self.hideShowAllImageView(isHidden: false)
         for (key, _) in self.selectedPlayersWithTime {
@@ -337,7 +338,7 @@ class GameViewController: UIViewController {
             }
         }
     }
-    func updateEliminatePlayerImageView() {
+    private func updateEliminatePlayerImageView() {
         for player in self.invalidPlayerListTillNextWord {
             switch player.id {
             case AppConstants.FirstPlayerKey:
@@ -358,14 +359,14 @@ class GameViewController: UIViewController {
         }
     }
     
-    func setAllPlayerWrongAnswer() {
+    private func setAllPlayerWrongAnswer() {
         playerImageSet(imageView: firstPlayerRWImage, isAnswerRight: false)
         playerImageSet(imageView: secondPlayerRWImage, isAnswerRight: false)
         playerImageSet(imageView: thirdPlayerRWImage, isAnswerRight: false)
         playerImageSet(imageView: fourthPlayerRWImage, isAnswerRight: false)
     }
     
-    func hidePrizePlayer(expectPlayer: Player? = nil) {
+    private func hidePrizePlayer(expectPlayer: Player? = nil) {
         self.firstPlayerPrizeImageView.isHidden = true
         self.secondPlayerPrizeImageView.isHidden = true
         self.thirdPlayerPrizeImageView.isHidden = true
@@ -391,7 +392,7 @@ class GameViewController: UIViewController {
     
     
     //MARK:- Buzzer Button Interaction Methods
-    func enableUserInteractionAllPlayer() {
+    private func enableUserInteractionAllPlayer() {
         playerButtonEnable(button: firstPlayerButton, isEnable: true)
         
         playerButtonEnable(button: secondPlayerButton, isEnable: true)
@@ -401,7 +402,7 @@ class GameViewController: UIViewController {
         playerButtonEnable(button: fourthPlayerButton, isEnable: true)
     }
     
-    func disableAllPlayerInteractionTillNextWord(withoutAlpha: Bool = false) {
+    private func disableAllPlayerInteractionTillNextWord(withoutAlpha: Bool = false) {
         playerButtonEnable(button: firstPlayerButton, isEnable: false, withoutAlpha: withoutAlpha)
         
         playerButtonEnable(button: secondPlayerButton, isEnable: false, withoutAlpha: withoutAlpha)
@@ -411,7 +412,7 @@ class GameViewController: UIViewController {
         playerButtonEnable(button: fourthPlayerButton, isEnable: false, withoutAlpha: withoutAlpha)
     }
     
-    func disableUserInteractionTillNextWord() {
+    private func disableUserInteractionTillNextWord() {
         var disbalePlayer:[Player] = invalidPlayerListTillNextWord
         for (key, _) in self.selectedPlayersWithTime {
             switch key {
@@ -434,7 +435,7 @@ class GameViewController: UIViewController {
         self.invalidPlayerListTillNextWord = disbalePlayer
     }
     
-    func enableThoseWhoAreNotDisableTillNextWord(){
+    private func enableThoseWhoAreNotDisableTillNextWord(){
            var enablePlayers = playerArray
            let disablePlayer = invalidPlayerListTillNextWord
            enablePlayers = Array(Set(enablePlayers).subtracting(disablePlayer))
@@ -456,14 +457,14 @@ class GameViewController: UIViewController {
     
     
     //MARK:- Random Word Animation Methods
-    func moveNameOffScreen() {
+    private func moveNameOffScreen() {
         self.disableAllPlayerInteractionTillNextWord()
-        self.randomWordConstraint.constant = -50
+        self.randomWordConstraint.constant = -80
         self.view.layoutIfNeeded()
         progressBar.setProgress(0, animated: false)
     }
     
-    func moveNameOnScreen() {
+    private func moveNameOnScreen() {
         self.view.layoutIfNeeded()
         UIView.animate(withDuration: 1.0) {
             self.enableThoseWhoAreNotDisableTillNextWord()
@@ -475,7 +476,7 @@ class GameViewController: UIViewController {
     
     
     //MARK:- Player Methods
-    func setUpPlayer() {
+    private func setUpPlayer() {
         let players:[Player] = [
             Player(id: AppConstants.FirstPlayerKey, name: "1st Player", score: 0),
             Player(id: AppConstants.SecondPlayerKey, name: "2nd Player", score: 0),
@@ -488,7 +489,7 @@ class GameViewController: UIViewController {
         hidePrizePlayer()
     }
     
-    func removePlayerData() {
+    private func removePlayerData() {
         self.selectedPlayersWithTime = [:]
         firstPlayerButton.isSelected = false
         secondPlayerButton.isSelected = false
@@ -496,7 +497,7 @@ class GameViewController: UIViewController {
         fourthPlayerButton.isSelected = false
     }
     
-    func whoClickedFirst() {
+    private func whoClickedFirst() {
         disableAllPlayerInteractionTillNextWord(withoutAlpha: true)
         let sortedArray = self.selectedPlayersWithTime.sorted{ $0.value < $1.value }
         
@@ -516,7 +517,7 @@ class GameViewController: UIViewController {
     
     
     //MARK:- Helper Methods
-    func playerImageSet(imageView: UIImageView, isAnswerRight: Bool) {
+    private func playerImageSet(imageView: UIImageView, isAnswerRight: Bool) {
         if isAnswerRight {
             imageView.image = #imageLiteral(resourceName: "checkRound")
             imageView.tintColor = .green
@@ -526,14 +527,14 @@ class GameViewController: UIViewController {
         }
     }
     
-    func playerButtonEnable(button: UIButton, isEnable: Bool, withoutAlpha: Bool = false) {
+    private func playerButtonEnable(button: UIButton, isEnable: Bool, withoutAlpha: Bool = false) {
         button.isUserInteractionEnabled = isEnable
         button.alpha = isEnable || withoutAlpha ? 1.0 : 0.3
     }
     
     
     //MARK:- Words Methods
-    func setRandomSapanishWords(_ limit:Int = 5, selectedWord: Word) {
+    private func setRandomSapanishWords(_ limit:Int = 5, selectedWord: Word) {
         var randomWord:[String] = []
         randomWord.append(selectedWord.textSpanish)
         for _ in 0..<limit-1 {
@@ -544,7 +545,7 @@ class GameViewController: UIViewController {
         self.randomSpanishWords = randomWord
     }
     
-    func isRightTranslation() -> Bool {
+    private func isRightTranslation() -> Bool {
         if let currentWord = currentWord, currentWord.textSpanish == currentRandomWord {
             return true
         }
@@ -553,7 +554,7 @@ class GameViewController: UIViewController {
     
     
     //MARK: - End Game
-    func endGame() {
+    private func endGame() {
         let endGameViewController: EndGameViewController = self.storyboard?.instantiateViewController(withIdentifier: AppConstants.EndGameViewController) as! EndGameViewController
         let sortedArray = playerArray.sorted{ $0.score > $1.score }
         if let first = sortedArray.first, first.score > 0 {
@@ -565,7 +566,7 @@ class GameViewController: UIViewController {
     
     
     //MARK: - Random Element
-    func chooseRandom() -> String {
+    private func chooseRandom() -> String {
         if seenIndex.count == randomSpanishWords.count { return "" }
         let index = Int(arc4random_uniform(UInt32(randomSpanishWords.count)))
         if seenIndex.contains(index) {
@@ -578,7 +579,7 @@ class GameViewController: UIViewController {
     
     
     //MARK:- PopUp View
-    func showPopOverView() {
+    private func showPopOverView() {
         guard isOnGameScreen else {
             return
         }

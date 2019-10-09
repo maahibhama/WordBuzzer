@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46B8BCCC234E0CFC00585707 /* Word_BuzzerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B8BCCB234E0CFC00585707 /* Word_BuzzerUITests.swift */; };
 		C0544485234D467B00D09BA6 /* LinearProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0544484234D467B00D09BA6 /* LinearProgressView.swift */; };
 		C07C88FE234D359100A1F3D6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07C88FD234D359100A1F3D6 /* GradientView.swift */; };
 		C082053F23479CC700DCB094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082053E23479CC700DCB094 /* AppDelegate.swift */; };
-		C082054123479CC700DCB094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082054023479CC700DCB094 /* SceneDelegate.swift */; };
 		C082054323479CC700DCB094 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082054223479CC700DCB094 /* GameViewController.swift */; };
 		C082054623479CC700DCB094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C082054423479CC700DCB094 /* Main.storyboard */; };
 		C082054823479CC800DCB094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C082054723479CC800DCB094 /* Assets.xcassets */; };
@@ -26,12 +26,24 @@
 		C0C14D1A234CD2A1006A1516 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C14D19234CD2A1006A1516 /* PopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		46B8BCCE234E0CFC00585707 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C082053323479CC700DCB094 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C082053A23479CC700DCB094;
+			remoteInfo = WordBuzzer;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		46B8BCC9234E0CFB00585707 /* Word BuzzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Word BuzzerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46B8BCCB234E0CFC00585707 /* Word_BuzzerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word_BuzzerUITests.swift; sourceTree = "<group>"; };
+		46B8BCCD234E0CFC00585707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0544484234D467B00D09BA6 /* LinearProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearProgressView.swift; sourceTree = "<group>"; };
 		C07C88FD234D359100A1F3D6 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C082053B23479CC700DCB094 /* Word Buzzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word Buzzer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C082053E23479CC700DCB094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C082054023479CC700DCB094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C082054223479CC700DCB094 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C082054523479CC700DCB094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C082054723479CC800DCB094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +61,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		46B8BCC6234E0CFB00585707 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C082053823479CC700DCB094 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46B8BCCA234E0CFC00585707 /* Word BuzzerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				46B8BCCB234E0CFC00585707 /* Word_BuzzerUITests.swift */,
+				46B8BCCD234E0CFC00585707 /* Info.plist */,
+			);
+			path = "Word BuzzerUITests";
+			sourceTree = "<group>";
+		};
 		C06D7692234D255500E0FAA6 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				C082053D23479CC700DCB094 /* WordBuzzer */,
+				46B8BCCA234E0CFC00585707 /* Word BuzzerUITests */,
 				C082053C23479CC700DCB094 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				C082053B23479CC700DCB094 /* Word Buzzer.app */,
+				46B8BCC9234E0CFB00585707 /* Word BuzzerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,7 +125,6 @@
 				C0820559234A808D00DCB094 /* Data */,
 				C08205522347DD1C00DCB094 /* Model */,
 				C082053E23479CC700DCB094 /* AppDelegate.swift */,
-				C082054023479CC700DCB094 /* SceneDelegate.swift */,
 				C082054723479CC800DCB094 /* Assets.xcassets */,
 				C082054923479CC800DCB094 /* LaunchScreen.storyboard */,
 				C082054C23479CC800DCB094 /* Info.plist */,
@@ -151,6 +180,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		46B8BCC8234E0CFB00585707 /* Word BuzzerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46B8BCD2234E0CFC00585707 /* Build configuration list for PBXNativeTarget "Word BuzzerUITests" */;
+			buildPhases = (
+				46B8BCC5234E0CFB00585707 /* Sources */,
+				46B8BCC6234E0CFB00585707 /* Frameworks */,
+				46B8BCC7234E0CFB00585707 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46B8BCCF234E0CFC00585707 /* PBXTargetDependency */,
+			);
+			name = "Word BuzzerUITests";
+			productName = "Word BuzzerUITests";
+			productReference = 46B8BCC9234E0CFB00585707 /* Word BuzzerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C082053A23479CC700DCB094 /* WordBuzzer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C082054F23479CC800DCB094 /* Build configuration list for PBXNativeTarget "WordBuzzer" */;
@@ -174,10 +221,14 @@
 		C082053323479CC700DCB094 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Mahendra Bhama";
 				TargetAttributes = {
+					46B8BCC8234E0CFB00585707 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = C082053A23479CC700DCB094;
+					};
 					C082053A23479CC700DCB094 = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -197,11 +248,19 @@
 			projectRoot = "";
 			targets = (
 				C082053A23479CC700DCB094 /* WordBuzzer */,
+				46B8BCC8234E0CFB00585707 /* Word BuzzerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		46B8BCC7234E0CFB00585707 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C082053923479CC700DCB094 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +275,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		46B8BCC5234E0CFB00585707 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46B8BCCC234E0CFC00585707 /* Word_BuzzerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C082053723479CC700DCB094 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,11 +299,18 @@
 				C082055D234A80D100DCB094 /* Api.swift in Sources */,
 				C0820561234B3EF300DCB094 /* EndGameViewController.swift in Sources */,
 				C0C14D18234BCBD5006A1516 /* UIView+Animation.swift in Sources */,
-				C082054123479CC700DCB094 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46B8BCCF234E0CFC00585707 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C082053A23479CC700DCB094 /* WordBuzzer */;
+			targetProxy = 46B8BCCE234E0CFC00585707 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C082054423479CC700DCB094 /* Main.storyboard */ = {
@@ -258,6 +332,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		46B8BCD0234E0CFC00585707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M35DLYREN6;
+				INFOPLIST_FILE = "Word BuzzerUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kuliza.Word-BuzzerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WordBuzzer;
+			};
+			name = Debug;
+		};
+		46B8BCD1234E0CFC00585707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M35DLYREN6;
+				INFOPLIST_FILE = "Word BuzzerUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kuliza.Word-BuzzerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WordBuzzer;
+			};
+			name = Release;
+		};
 		C082054D23479CC800DCB094 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -376,15 +492,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q8F497683M;
+				DEVELOPMENT_TEAM = M35DLYREN6;
 				INFOPLIST_FILE = WordBuzzer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maahi.WordBuzzer;
 				PRODUCT_NAME = "Word Buzzer";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -394,15 +513,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q8F497683M;
+				DEVELOPMENT_TEAM = M35DLYREN6;
 				INFOPLIST_FILE = WordBuzzer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maahi.WordBuzzer;
 				PRODUCT_NAME = "Word Buzzer";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -411,6 +533,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		46B8BCD2234E0CFC00585707 /* Build configuration list for PBXNativeTarget "Word BuzzerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46B8BCD0234E0CFC00585707 /* Debug */,
+				46B8BCD1234E0CFC00585707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C082053623479CC700DCB094 /* Build configuration list for PBXProject "WordBuzzer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

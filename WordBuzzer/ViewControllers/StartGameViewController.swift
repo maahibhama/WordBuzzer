@@ -28,15 +28,15 @@ class StartGameViewController: UIViewController {
     
     //MARK:- Variables
     
-    var selectedNumberOfWordsButton: UIButton? {
+    private var selectedNumberOfWordsButton: UIButton? {
         didSet {
             self.selectedNumberOfWordsButton?.setImage(#imageLiteral(resourceName: "checkRound"), for: .normal)
         }
     }
     
-    var selectedNumberOfWords: Int = 0
+    private var selectedNumberOfWords: Int = 0
     
-    var wordsArray:[Word] = []
+    private var wordsArray:[Word] = []
 
     //MARK:- Life Cycle Methods
     override func viewDidLoad() {
@@ -96,7 +96,7 @@ class StartGameViewController: UIViewController {
     
     
     //MARK:- UI Helper Methods
-    func setupUI() {
+    private func setupUI() {
         
         setUpbuttonSelected(sender: twentyPlayerButton)
         setUpbuttonSelected(sender: fourtyPlayersButton)
@@ -106,20 +106,20 @@ class StartGameViewController: UIViewController {
         gameStartButton.layer.cornerRadius = 4.0
     }
     
-    func setUpbuttonSelected(sender: UIButton) {
+    private func setUpbuttonSelected(sender: UIButton) {
         sender.layer.cornerRadius = 4.0
         sender.setImage(nil, for: .normal)
     }
     
     
-    func selectNumberOfWordsSenderButton(sender: UIButton) {
+    private func selectNumberOfWordsSenderButton(sender: UIButton) {
         if let selectedWordsNumber = selectedNumberOfWordsButton {
             selectedWordsNumber.setImage(nil, for: .normal)
         }
         selectedNumberOfWordsButton = sender
     }
     
-    func selectedRandomWordsFromWordArray(limit: Int) -> [Word] {
+    private func selectedRandomWordsFromWordArray(limit: Int) -> [Word] {
         var randomWordArray:[Word] = []
         for _ in 0..<limit {
             if let randomWord = wordsArray.randomElement() {
@@ -129,7 +129,7 @@ class StartGameViewController: UIViewController {
         return randomWordArray
     }
     
-    func resetUI() {
+    private func resetUI() {
         
         if let selectedNumberOfWordsButton = selectedNumberOfWordsButton {
             selectedNumberOfWordsButton.setImage(nil, for: .normal)
@@ -139,7 +139,7 @@ class StartGameViewController: UIViewController {
     }
     
     //MARK:- API Helpers
-    func fetchWordData() {
+    private func fetchWordData() {
         API.getWordsFromJson { (words, error) in
             guard error == nil else {
                 
