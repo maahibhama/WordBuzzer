@@ -30,12 +30,20 @@ class Word_BuzzerUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let app = XCUIApplication()
         XCTAssert(app.navigationBars["Start Game"].exists)
+        XCTAssert(app.navigationBars["Start Game"].buttons["info"].exists)
         XCTAssert(app.staticTexts["Number of Words"].exists)
         XCTAssert(app.buttons["20 Words"].exists)
         XCTAssert(app.buttons["40 Words"].exists)
         XCTAssert(app.buttons["60 Words"].exists)
         XCTAssert(app.buttons["80 Words"].exists)
         XCTAssert(app.buttons["Start Game"].exists)
+    }
+    
+    //check info button on start Game Screen
+    func testInfoButtonOnGameScreen() {
+        let app = XCUIApplication()
+        app.navigationBars["Start Game"].buttons["info"].tap()
+        XCTAssert(app.navigationBars["Info"].exists)
     }
     
     //Check Alert Before Choose Number of Words
@@ -66,6 +74,14 @@ class Word_BuzzerUITests: XCTestCase {
         app.buttons["20 Words"].tap()
         app.buttons["Start Game"].tap()
         XCTAssert(app.navigationBars["Game"].exists)
+    }
+    
+    func testInfoButtonOnStartGame() {
+        testSelectedWordToStartGame()
+        let app = XCUIApplication()
+        XCTAssert(app.navigationBars["Game"].buttons["info"].exists)
+        app.navigationBars["Game"].buttons["info"].tap()
+        XCTAssert(app.navigationBars["Info"].exists)
     }
     
     func testGameScreenComponent() {
@@ -199,10 +215,15 @@ class Word_BuzzerUITests: XCTestCase {
         
         let alert = app.alerts["Are you sure you want to quit?"]
         let alertYes = alert.buttons["Yes"]
+        
+        let winnerScreen = app.navigationBars["Winner Screen"]
+        let exists = NSPredicate(format: "exists == true")
+        expectation(for: exists, evaluatedWith: winnerScreen, handler: nil)
         alertYes.tap()
+        waitForExpectations(timeout: 1.0, handler: nil)
         
         //Navigation Value
-        XCTAssert(app.navigationBars["Winner Screen"].exists)
+        XCTAssert(winnerScreen.exists)
         
         //No Winner
         XCTAssert(app.staticTexts["No Winner"].exists)
