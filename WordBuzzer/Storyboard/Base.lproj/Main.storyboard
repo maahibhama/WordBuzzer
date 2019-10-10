@@ -758,6 +758,49 @@
             </objects>
             <point key="canvasLocation" x="3628.985507246377" y="139.95535714285714"/>
         </scene>
+        <!--Info-->
+        <scene sceneID="ndj-GU-Ggw">
+            <objects>
+                <viewController storyboardIdentifier="InstructionViewController" title="Info" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d2w-Cl-oGR" customClass="InstructionViewController" customModule="Word_Buzzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Lt-3y-gfr" customClass="GradientView" customModule="Word_Buzzer" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1dM-TN-3Xw">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="d2w-Cl-oGR" id="SNQ-mR-LoV"/>
+                                    <outlet property="delegate" destination="d2w-Cl-oGR" id="3hA-wc-jZk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kph-Wo-D8p" firstAttribute="bottom" secondItem="1dM-TN-3Xw" secondAttribute="bottom" id="S35-iN-VNO"/>
+                            <constraint firstItem="1dM-TN-3Xw" firstAttribute="trailing" secondItem="kph-Wo-D8p" secondAttribute="trailing" id="oWt-WL-PhT"/>
+                            <constraint firstItem="1dM-TN-3Xw" firstAttribute="leading" secondItem="kph-Wo-D8p" secondAttribute="leading" id="qwy-Am-dqv"/>
+                            <constraint firstItem="1dM-TN-3Xw" firstAttribute="top" secondItem="kph-Wo-D8p" secondAttribute="top" id="xeG-IT-oSV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kph-Wo-D8p"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="0.5568627451" green="0.1764705882" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.2901960784" green="0.0" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="1dM-TN-3Xw" id="ye3-3d-ZZN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fN7-w5-ir2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4360.8000000000002" y="130.88455772113943"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="pG1-4s-e5z">
             <objects>
