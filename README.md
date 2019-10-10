@@ -5,7 +5,7 @@
 This is ios application using swift.
 
 ## Screenshots
-![Alt text](https://github.com/maahibhama/BoltDemoApp/blob/master/src/Assets/Screenshots/screenshot_image.png "First Screenshot")
+![Alt text](https://github.com/maahibhama/WordBuzzer/blob/master/buzzerGame.png "First Screenshot")
 
 ## Getting started
 
