@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +12,49 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VFZ-Lq-98D">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQ6-fQ-YGl">
+                                <rect key="frame" x="41.5" y="347" width="331" height="212"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Buzzer Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hru-WJ-kTy">
+                                        <rect key="frame" x="10" y="170" width="311" height="42"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="32"/>
+                                        <color key="textColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="W9s-SQ-G3N">
+                                        <rect key="frame" x="90.5" y="0.0" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="W9s-SQ-G3N" secondAttribute="height" multiplier="1:1" id="bHx-RL-np1"/>
+                                            <constraint firstAttribute="height" constant="150" id="cGz-qw-YCk"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Hru-WJ-kTy" secondAttribute="bottom" id="AGJ-ip-5wH"/>
+                                    <constraint firstItem="Hru-WJ-kTy" firstAttribute="top" secondItem="W9s-SQ-G3N" secondAttribute="bottom" constant="20" id="EJD-GV-VOq"/>
+                                    <constraint firstItem="W9s-SQ-G3N" firstAttribute="centerX" secondItem="XQ6-fQ-YGl" secondAttribute="centerX" id="d8K-21-mAe"/>
+                                    <constraint firstItem="Hru-WJ-kTy" firstAttribute="leading" secondItem="XQ6-fQ-YGl" secondAttribute="leading" constant="10" id="g1x-UF-Viu"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hru-WJ-kTy" secondAttribute="trailing" constant="10" id="we3-9P-vA3"/>
+                                    <constraint firstItem="W9s-SQ-G3N" firstAttribute="top" secondItem="XQ6-fQ-YGl" secondAttribute="top" id="yRy-WW-NQd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VFZ-Lq-98D" secondAttribute="trailing" id="3yz-yr-FiC"/>
+                            <constraint firstItem="XQ6-fQ-YGl" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="TNm-la-gcV"/>
+                            <constraint firstItem="XQ6-fQ-YGl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VYf-WI-nFt"/>
+                            <constraint firstItem="VFZ-Lq-98D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X36-i9-PC7"/>
+                            <constraint firstItem="XQ6-fQ-YGl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="seK-z4-mge"/>
+                            <constraint firstAttribute="bottom" secondItem="VFZ-Lq-98D" secondAttribute="bottom" id="sf9-Uy-IbQ"/>
+                            <constraint firstItem="VFZ-Lq-98D" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="uae-7V-xwH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +63,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="appLogo" width="100" height="100"/>
+        <image name="launch" width="1440" height="900"/>
+    </resources>
 </document>

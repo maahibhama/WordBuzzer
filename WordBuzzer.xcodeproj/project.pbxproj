@@ -7,26 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46B8BCCC234E0CFC00585707 /* Word_BuzzerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B8BCCB234E0CFC00585707 /* Word_BuzzerUITests.swift */; };
+		C036796C234F6E5900BB0D0A /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036796B234F6E5900BB0D0A /* InstructionViewController.swift */; };
+		C0367970234F6F1300BB0D0A /* InstructionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036796E234F6F1300BB0D0A /* InstructionTableViewCell.swift */; };
+		C0367971234F6F1300BB0D0A /* InstructionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C036796F234F6F1300BB0D0A /* InstructionTableViewCell.xib */; };
+		C0367974234F804200BB0D0A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08205572349B1C500DCB094 /* AppConstants.swift */; };
+		C0544485234D467B00D09BA6 /* LinearProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0544484234D467B00D09BA6 /* LinearProgressView.swift */; };
+		C07C88FE234D359100A1F3D6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07C88FD234D359100A1F3D6 /* GradientView.swift */; };
 		C082053F23479CC700DCB094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082053E23479CC700DCB094 /* AppDelegate.swift */; };
-		C082054123479CC700DCB094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082054023479CC700DCB094 /* SceneDelegate.swift */; };
-		C082054323479CC700DCB094 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082054223479CC700DCB094 /* ViewController.swift */; };
+		C082054323479CC700DCB094 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082054223479CC700DCB094 /* GameViewController.swift */; };
 		C082054623479CC700DCB094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C082054423479CC700DCB094 /* Main.storyboard */; };
 		C082054823479CC800DCB094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C082054723479CC800DCB094 /* Assets.xcassets */; };
 		C082054B23479CC800DCB094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C082054923479CC800DCB094 /* LaunchScreen.storyboard */; };
+		C08205542347DD3600DCB094 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08205532347DD3600DCB094 /* Player.swift */; };
+		C08205562347DDE100DCB094 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08205552347DDE100DCB094 /* Word.swift */; };
+		C082055B234A80A700DCB094 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = C082055A234A80A700DCB094 /* words.json */; };
+		C082055D234A80D100DCB094 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082055C234A80D100DCB094 /* Api.swift */; };
+		C0820561234B3EF300DCB094 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0820560234B3EF300DCB094 /* EndGameViewController.swift */; };
+		C0820564234B3F9B00DCB094 /* StartGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0820563234B3F9B00DCB094 /* StartGameViewController.swift */; };
+		C0C14D18234BCBD5006A1516 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C14D17234BCBD5006A1516 /* UIView+Animation.swift */; };
+		C0C14D1A234CD2A1006A1516 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C14D19234CD2A1006A1516 /* PopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		46B8BCCE234E0CFC00585707 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C082053323479CC700DCB094 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C082053A23479CC700DCB094;
+			remoteInfo = WordBuzzer;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		C082053B23479CC700DCB094 /* WordBuzzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordBuzzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46B8BCC9234E0CFB00585707 /* Word BuzzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Word BuzzerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46B8BCCB234E0CFC00585707 /* Word_BuzzerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word_BuzzerUITests.swift; sourceTree = "<group>"; };
+		46B8BCCD234E0CFC00585707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C036796B234F6E5900BB0D0A /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
+		C036796E234F6F1300BB0D0A /* InstructionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionTableViewCell.swift; sourceTree = "<group>"; };
+		C036796F234F6F1300BB0D0A /* InstructionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstructionTableViewCell.xib; sourceTree = "<group>"; };
+		C0544484234D467B00D09BA6 /* LinearProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearProgressView.swift; sourceTree = "<group>"; };
+		C07C88FD234D359100A1F3D6 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		C082053B23479CC700DCB094 /* Word Buzzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word Buzzer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C082053E23479CC700DCB094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C082054023479CC700DCB094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C082054223479CC700DCB094 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C082054223479CC700DCB094 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C082054523479CC700DCB094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C082054723479CC800DCB094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C082054A23479CC800DCB094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C082054C23479CC800DCB094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C08205532347DD3600DCB094 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		C08205552347DDE100DCB094 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		C08205572349B1C500DCB094 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		C082055A234A80A700DCB094 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		C082055C234A80D100DCB094 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		C0820560234B3EF300DCB094 /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
+		C0820563234B3F9B00DCB094 /* StartGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewController.swift; sourceTree = "<group>"; };
+		C0C14D17234BCBD5006A1516 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
+		C0C14D19234CD2A1006A1516 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		46B8BCC6234E0CFB00585707 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C082053823479CC700DCB094 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +84,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46B8BCCA234E0CFC00585707 /* Word BuzzerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				46B8BCCB234E0CFC00585707 /* Word_BuzzerUITests.swift */,
+				46B8BCCD234E0CFC00585707 /* Info.plist */,
+			);
+			path = "Word BuzzerUITests";
+			sourceTree = "<group>";
+		};
+		C036796D234F6EE600BB0D0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C036796E234F6F1300BB0D0A /* InstructionTableViewCell.swift */,
+				C036796F234F6F1300BB0D0A /* InstructionTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C06D7692234D255500E0FAA6 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C0544484234D467B00D09BA6 /* LinearProgressView.swift */,
+				C0C14D17234BCBD5006A1516 /* UIView+Animation.swift */,
+				C07C88FD234D359100A1F3D6 /* GradientView.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		C082053223479CC700DCB094 = {
 			isa = PBXGroup;
 			children = (
 				C082053D23479CC700DCB094 /* WordBuzzer */,
+				46B8BCCA234E0CFC00585707 /* Word BuzzerUITests */,
 				C082053C23479CC700DCB094 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,7 +124,8 @@
 		C082053C23479CC700DCB094 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C082053B23479CC700DCB094 /* WordBuzzer.app */,
+				C082053B23479CC700DCB094 /* Word Buzzer.app */,
+				46B8BCC9234E0CFB00585707 /* Word BuzzerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,10 +133,14 @@
 		C082053D23479CC700DCB094 /* WordBuzzer */ = {
 			isa = PBXGroup;
 			children = (
+				C06D7692234D255500E0FAA6 /* Helper */,
+				C0D5CBA0234B406C008D67AC /* Constants */,
+				C0820565234B3FA700DCB094 /* Storyboard */,
+				C036796D234F6EE600BB0D0A /* Views */,
+				C0820562234B3F7100DCB094 /* ViewControllers */,
+				C0820559234A808D00DCB094 /* Data */,
+				C08205522347DD1C00DCB094 /* Model */,
 				C082053E23479CC700DCB094 /* AppDelegate.swift */,
-				C082054023479CC700DCB094 /* SceneDelegate.swift */,
-				C082054223479CC700DCB094 /* ViewController.swift */,
-				C082054423479CC700DCB094 /* Main.storyboard */,
 				C082054723479CC800DCB094 /* Assets.xcassets */,
 				C082054923479CC800DCB094 /* LaunchScreen.storyboard */,
 				C082054C23479CC800DCB094 /* Info.plist */,
@@ -67,9 +148,73 @@
 			path = WordBuzzer;
 			sourceTree = "<group>";
 		};
+		C08205522347DD1C00DCB094 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C08205532347DD3600DCB094 /* Player.swift */,
+				C08205552347DDE100DCB094 /* Word.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C0820559234A808D00DCB094 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C082055C234A80D100DCB094 /* Api.swift */,
+				C082055A234A80A700DCB094 /* words.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C0820562234B3F7100DCB094 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C0820563234B3F9B00DCB094 /* StartGameViewController.swift */,
+				C082054223479CC700DCB094 /* GameViewController.swift */,
+				C0820560234B3EF300DCB094 /* EndGameViewController.swift */,
+				C0C14D19234CD2A1006A1516 /* PopUpViewController.swift */,
+				C036796B234F6E5900BB0D0A /* InstructionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C0820565234B3FA700DCB094 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C082054423479CC700DCB094 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		C0D5CBA0234B406C008D67AC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C08205572349B1C500DCB094 /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		46B8BCC8234E0CFB00585707 /* Word BuzzerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46B8BCD2234E0CFC00585707 /* Build configuration list for PBXNativeTarget "Word BuzzerUITests" */;
+			buildPhases = (
+				46B8BCC5234E0CFB00585707 /* Sources */,
+				46B8BCC6234E0CFB00585707 /* Frameworks */,
+				46B8BCC7234E0CFB00585707 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46B8BCCF234E0CFC00585707 /* PBXTargetDependency */,
+			);
+			name = "Word BuzzerUITests";
+			productName = "Word BuzzerUITests";
+			productReference = 46B8BCC9234E0CFB00585707 /* Word BuzzerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C082053A23479CC700DCB094 /* WordBuzzer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C082054F23479CC800DCB094 /* Build configuration list for PBXNativeTarget "WordBuzzer" */;
@@ -84,7 +229,7 @@
 			);
 			name = WordBuzzer;
 			productName = WordBuzzer;
-			productReference = C082053B23479CC700DCB094 /* WordBuzzer.app */;
+			productReference = C082053B23479CC700DCB094 /* Word Buzzer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -93,10 +238,14 @@
 		C082053323479CC700DCB094 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Mahendra Bhama";
 				TargetAttributes = {
+					46B8BCC8234E0CFB00585707 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = C082053A23479CC700DCB094;
+					};
 					C082053A23479CC700DCB094 = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -116,35 +265,72 @@
 			projectRoot = "";
 			targets = (
 				C082053A23479CC700DCB094 /* WordBuzzer */,
+				46B8BCC8234E0CFB00585707 /* Word BuzzerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		46B8BCC7234E0CFB00585707 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C082053923479CC700DCB094 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C082054B23479CC800DCB094 /* LaunchScreen.storyboard in Resources */,
+				C082055B234A80A700DCB094 /* words.json in Resources */,
 				C082054823479CC800DCB094 /* Assets.xcassets in Resources */,
 				C082054623479CC700DCB094 /* Main.storyboard in Resources */,
+				C0367971234F6F1300BB0D0A /* InstructionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		46B8BCC5234E0CFB00585707 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46B8BCCC234E0CFC00585707 /* Word_BuzzerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C082053723479CC700DCB094 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C082054323479CC700DCB094 /* ViewController.swift in Sources */,
+				C08205542347DD3600DCB094 /* Player.swift in Sources */,
+				C0544485234D467B00D09BA6 /* LinearProgressView.swift in Sources */,
+				C07C88FE234D359100A1F3D6 /* GradientView.swift in Sources */,
+				C082054323479CC700DCB094 /* GameViewController.swift in Sources */,
+				C0C14D1A234CD2A1006A1516 /* PopUpViewController.swift in Sources */,
+				C036796C234F6E5900BB0D0A /* InstructionViewController.swift in Sources */,
+				C08205562347DDE100DCB094 /* Word.swift in Sources */,
 				C082053F23479CC700DCB094 /* AppDelegate.swift in Sources */,
-				C082054123479CC700DCB094 /* SceneDelegate.swift in Sources */,
+				C0820564234B3F9B00DCB094 /* StartGameViewController.swift in Sources */,
+				C0367970234F6F1300BB0D0A /* InstructionTableViewCell.swift in Sources */,
+				C082055D234A80D100DCB094 /* Api.swift in Sources */,
+				C0367974234F804200BB0D0A /* AppConstants.swift in Sources */,
+				C0820561234B3EF300DCB094 /* EndGameViewController.swift in Sources */,
+				C0C14D18234BCBD5006A1516 /* UIView+Animation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46B8BCCF234E0CFC00585707 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C082053A23479CC700DCB094 /* WordBuzzer */;
+			targetProxy = 46B8BCCE234E0CFC00585707 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C082054423479CC700DCB094 /* Main.storyboard */ = {
@@ -166,6 +352,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		46B8BCD0234E0CFC00585707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M35DLYREN6;
+				INFOPLIST_FILE = "Word BuzzerUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kuliza.Word-BuzzerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WordBuzzer;
+			};
+			name = Debug;
+		};
+		46B8BCD1234E0CFC00585707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M35DLYREN6;
+				INFOPLIST_FILE = "Word BuzzerUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "kuliza.Word-BuzzerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WordBuzzer;
+			};
+			name = Release;
+		};
 		C082054D23479CC800DCB094 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -284,15 +512,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q8F497683M;
+				DEVELOPMENT_TEAM = M35DLYREN6;
 				INFOPLIST_FILE = WordBuzzer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maahi.WordBuzzer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Word Buzzer";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,15 +533,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q8F497683M;
+				DEVELOPMENT_TEAM = M35DLYREN6;
 				INFOPLIST_FILE = WordBuzzer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maahi.WordBuzzer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Word Buzzer";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -319,6 +553,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		46B8BCD2234E0CFC00585707 /* Build configuration list for PBXNativeTarget "Word BuzzerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46B8BCD0234E0CFC00585707 /* Debug */,
+				46B8BCD1234E0CFC00585707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C082053623479CC700DCB094 /* Build configuration list for PBXProject "WordBuzzer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
