@@ -15,6 +15,8 @@ class StartGameViewController: UIViewController {
     
     @IBOutlet weak var numberOfWordsLabel: UILabel!
     
+    @IBOutlet weak var instructionBarButton: UINavigationItem!
+    
     // Number of Words
     @IBOutlet weak var twentyPlayerButton: UIButton!
     
@@ -56,6 +58,10 @@ class StartGameViewController: UIViewController {
     
     
     //MARK:- Interface Builder Actions
+    @objc func infoButtonAction(_ sender: UIBarButtonItem) {
+         let instructionVC: InstructionViewController = self.storyboard?.instantiateViewController(withIdentifier: AppConstants.InstructionViewController) as! InstructionViewController
+        self.navigationController?.pushViewController(instructionVC, animated: true)
+    }
     
     // Number of Words Action
     @IBAction func twentyPlayerButtonAction(_ sender: UIButton) {
@@ -107,6 +113,9 @@ class StartGameViewController: UIViewController {
         setUpbuttonSelected(sender: eightyPlayersButton, name: AppConstants.EightyWords)
         
         gameStartButton.layer.cornerRadius = 4.0
+        let infoButton: UIBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "info"), style: .plain, target: self, action: #selector(infoButtonAction))
+        infoButton.tintColor = #colorLiteral(red: 0.3681181669, green: 0.1824730039, blue: 0.903453052, alpha: 1)
+        navigationItem.rightBarButtonItem = infoButton
     }
     
     private func setUpbuttonSelected(sender: UIButton, name: String) {

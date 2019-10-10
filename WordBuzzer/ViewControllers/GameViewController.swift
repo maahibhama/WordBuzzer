@@ -162,6 +162,11 @@ class GameViewController: UIViewController {
     
     
     //MARK:- Interface Builder Actions
+   @objc func infoButtonAction(_ sender: UIBarButtonItem) {
+         let instructionVC: InstructionViewController = self.storyboard?.instantiateViewController(withIdentifier: AppConstants.InstructionViewController) as! InstructionViewController
+        self.navigationController?.pushViewController(instructionVC, animated: true)
+    }
+    
     @IBAction func firstButtonAction(_ sender: UIButton) {
         firstPlayerButton.isSelected = !sender.isSelected
         if let player = playerArray.first {
@@ -255,6 +260,11 @@ class GameViewController: UIViewController {
     
     //MARK:- Helper UI Methods
     private func setupInitialUI(){
+        
+        let infoButton: UIBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "info"), style: .plain, target: self, action: #selector(infoButtonAction))
+        infoButton.tintColor = #colorLiteral(red: 0.3681181669, green: 0.1824730039, blue: 0.903453052, alpha: 1)
+        navigationItem.rightBarButtonItem = infoButton
+        
         randomWordButton.layer.cornerRadius = randomWordButton.frame.height / 2.0
         randomWordButton.isUserInteractionEnabled = false
         nextWordButton.layer.cornerRadius = 4.0
